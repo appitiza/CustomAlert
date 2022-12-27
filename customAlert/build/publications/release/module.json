@@ -1,0 +1,132 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "net.appitiza.lib.customalert",
+    "module": "customAlert",
+    "version": "1.0.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.4"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.databinding",
+          "module": "viewbinding",
+          "version": {
+            "requires": "7.3.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.7.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "customAlert-1.0.0.aar",
+          "url": "customAlert-1.0.0.aar",
+          "size": 458011,
+          "sha512": "fd9b0214130db0a6869efc4cc5f9530dde50c5faa0087674c8f19020c3e13bb3ceb31070e215c75a0ddebc6888bd74fd8403ae7d37065ea0479a864e0627fb75",
+          "sha256": "aa590508cecd7890875ef47c4c43d53d44c840704d7205599790a20c9e63af3c",
+          "sha1": "2a27acedf584d101d55e518612a88cc0d9bd0b44",
+          "md5": "671d69d10593538ed75a132b3aba8367"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-parcelize-runtime",
+          "version": {
+            "requires": "1.7.20"
+          }
+        },
+        {
+          "group": "androidx.databinding",
+          "module": "viewbinding",
+          "version": {
+            "requires": "7.3.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.7.20"
+          }
+        },
+        {
+          "group": "androidx.core",
+          "module": "core-ktx",
+          "version": {
+            "requires": "1.9.0"
+          }
+        },
+        {
+          "group": "androidx.appcompat",
+          "module": "appcompat",
+          "version": {
+            "requires": "1.5.1"
+          }
+        },
+        {
+          "group": "com.google.android.material",
+          "module": "material",
+          "version": {
+            "requires": "1.7.0"
+          }
+        },
+        {
+          "group": "com.intuit.sdp",
+          "module": "sdp-android",
+          "version": {
+            "requires": "1.0.6"
+          }
+        },
+        {
+          "group": "com.intuit.ssp",
+          "module": "ssp-android",
+          "version": {
+            "requires": "1.0.6"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "customAlert-1.0.0.aar",
+          "url": "customAlert-1.0.0.aar",
+          "size": 458011,
+          "sha512": "fd9b0214130db0a6869efc4cc5f9530dde50c5faa0087674c8f19020c3e13bb3ceb31070e215c75a0ddebc6888bd74fd8403ae7d37065ea0479a864e0627fb75",
+          "sha256": "aa590508cecd7890875ef47c4c43d53d44c840704d7205599790a20c9e63af3c",
+          "sha1": "2a27acedf584d101d55e518612a88cc0d9bd0b44",
+          "md5": "671d69d10593538ed75a132b3aba8367"
+        }
+      ]
+    }
+  ]
+}

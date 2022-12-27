@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="default_positive_button_text_color">#FFFFFFFF</color>
+    <color name="default_negative_button_text_color">#CCE74E0F</color>
+    <color name="default_title_text_color">#000000</color>
+    <color name="default_message_text_color">#000000 </color>
+</resources>

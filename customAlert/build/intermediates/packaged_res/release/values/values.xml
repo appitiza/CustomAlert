@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="default_message_text_color">#000000 </color>
+    <color name="default_negative_button_text_color">#CCE74E0F</color>
+    <color name="default_positive_button_text_color">#FFFFFFFF</color>
+    <color name="default_title_text_color">#000000</color>
+    <style name="CustomButtonLarge" parent="@style/Widget.MaterialComponents.Button.TextButton">
+
+        <item name="backgroundTint">@null</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:hapticFeedbackEnabled">true</item>
+        <item name="android:layout_height">@dimen/_40sdp</item>
+    </style>
+    <style name="CustomButtonMedium" parent="@style/Widget.MaterialComponents.Button.TextButton">
+
+        <item name="backgroundTint">@null</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:hapticFeedbackEnabled">true</item>
+        <item name="android:layout_height">@dimen/_35sdp</item>
+    </style>
+    <style name="CustomButtonSmall" parent="@style/Widget.MaterialComponents.Button.TextButton">
+
+        <item name="backgroundTint">@null</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:hapticFeedbackEnabled">true</item>
+        <item name="android:layout_height">@dimen/_30sdp</item>
+    </style>
+    <style name="CustomDialog" parent="@android:style/Theme.Holo.Light">
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+</resources>
