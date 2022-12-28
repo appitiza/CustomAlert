@@ -6,6 +6,8 @@
     android:layout_height="wrap_content"
     android:paddingTop="@dimen/_6sdp"
     android:paddingBottom="@dimen/_6sdp"
+    android:layout_gravity="center"
+    android:gravity="center"
     android:orientation="vertical">
 
     <TextView
@@ -17,7 +19,6 @@
         android:layout_gravity="center"
         android:padding="@dimen/_9sdp"
         android:textColor="#ffffff"
-        android:background="@drawable/ripple_positive_btn"
         android:textSize="@dimen/_10ssp"
         android:textStyle="normal" />
 </LinearLayout>

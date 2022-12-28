@@ -8,12 +8,20 @@
         "source": "/Users/Ahammed/.gradle/daemon/7.4/com.appitiza.net.example.app-main-33:/drawable/ic_launcher_background.xml"
     },
     {
+        "merged": "com.appitiza.net.example.app-merged_res-31:/drawable_button_positive_bg.xml.flat",
+        "source": "com.appitiza.net.example.app-main-33:/drawable/button_positive_bg.xml"
+    },
+    {
         "merged": "/Users/Ahammed/.gradle/daemon/7.4/com.appitiza.net.example.app-merged_res-31:/mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "/Users/Ahammed/.gradle/daemon/7.4/com.appitiza.net.example.app-main-33:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
         "merged": "/Users/Ahammed/.gradle/daemon/7.4/com.appitiza.net.example.app-merged_res-31:/drawable-v24_ic_launcher_foreground.xml.flat",
         "source": "/Users/Ahammed/.gradle/daemon/7.4/com.appitiza.net.example.app-main-33:/drawable-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.appitiza.net.example.app-merged_res-31:/drawable_button_negative_bg.xml.flat",
+        "source": "com.appitiza.net.example.app-main-33:/drawable/button_negative_bg.xml"
     },
     {
         "merged": "/Users/Ahammed/.gradle/daemon/7.4/com.appitiza.net.example.app-merged_res-31:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
@@ -26,10 +34,6 @@
     {
         "merged": "/Users/Ahammed/.gradle/daemon/7.4/com.appitiza.net.example.app-merged_res-31:/mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "/Users/Ahammed/.gradle/daemon/7.4/com.appitiza.net.example.app-main-33:/mipmap-hdpi/ic_launcher_round.webp"
-    },
-    {
-        "merged": "com.appitiza.net.example.app-merged_res-31:/layout_activity_main.xml.flat",
-        "source": "com.appitiza.net.example.app-main-33:/layout/activity_main.xml"
     },
     {
         "merged": "/Users/Ahammed/.gradle/daemon/7.4/com.appitiza.net.example.app-merged_res-31:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",

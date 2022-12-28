@@ -1,97 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:background="@drawable/default_alert_bg"
-    android:orientation="vertical"
-    android:paddingBottom="@dimen/_14sdp">
+    android:layout_height="wrap_content">
 
     <LinearLayout
-        android:id="@+id/llHeader"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:orientation="vertical">
-
-        <ImageView
-            android:id="@+id/ivLogo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/_28sdp"
-            android:src="@drawable/ic_alert_info" />
-
-        <TextView
-            android:id="@+id/tvAlertHeading"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginStart="@dimen/_14sdp"
-            android:layout_marginTop="@dimen/_17sdp"
-            android:layout_marginEnd="@dimen/_14sdp"
-            android:fontFamily="@font/bukra_semi_bold_family"
-            android:gravity="center_horizontal"
-            android:textColor="#000000"
-            android:textSize="@dimen/_11ssp" />
-
-        <TextView
-            android:id="@+id/tvAlertMessage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginStart="@dimen/_14sdp"
-            android:layout_marginTop="@dimen/_11sdp"
-            android:layout_marginEnd="@dimen/_14sdp"
-            android:gravity="center_horizontal"
-            android:textSize="@dimen/_11ssp" />
-    </LinearLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvAlertContent"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/llFooter"
-        android:layout_below="@+id/llHeader"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="@dimen/_11sdp"
-        android:layout_marginBottom="@dimen/_17sdp"
-        android:gravity="center_horizontal"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        android:layout_height="match_parent"
+        android:background="@drawable/default_alert_bg"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_14sdp">
 
-    <LinearLayout
-        android:id="@+id/llFooter"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/llHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnOkay"
-            style="@style/CustomButtonMedium"
-            android:layout_width="@dimen/_187sdp"
-            android:layout_height="48dp"
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_28sdp"
+                android:src="@drawable/ic_alert_info" />
+
+            <TextView
+                android:id="@+id/tvAlertHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_17sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:fontFamily="@font/bukra_semi_bold_family"
+                android:gravity="center_horizontal"
+                android:textColor="#000000"
+                android:textSize="@dimen/_11ssp" />
+
+            <TextView
+                android:id="@+id/tvAlertMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_11sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:gravity="center_horizontal"
+                android:textSize="@dimen/_11ssp" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAlertContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginStart="@dimen/_14sdp"
-            android:layout_marginEnd="@dimen/_14sdp"
-            android:layout_marginBottom="@dimen/_14sdp"
-            android:fontFamily="@font/bukra_regular_family"
-            android:gravity="center"
-            android:textSize="@dimen/_10ssp" />
+            android:layout_marginTop="@dimen/_11sdp"
+            android:layout_marginBottom="@dimen/_17sdp"
+            android:gravity="center_horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnCancel"
-            style="@style/CustomButtonMedium"
-            android:layout_width="@dimen/_187sdp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginStart="@dimen/_14sdp"
-            android:layout_marginEnd="@dimen/_14sdp"
-            android:layout_marginBottom="@dimen/_14sdp"
-            android:fontFamily="@font/bukra_regular_family"
-            android:gravity="center"
-            android:textSize="@dimen/_10ssp" />
+        <LinearLayout
+            android:id="@+id/llFooter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnOkay"
+                style="@style/CustomButtonMedium"
+                android:layout_width="@dimen/_187sdp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:layout_marginBottom="@dimen/_14sdp"
+                android:fontFamily="@font/bukra_regular_family"
+                android:gravity="center"
+                android:textSize="@dimen/_10ssp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCancel"
+                style="@style/CustomButtonMedium"
+                android:layout_width="@dimen/_187sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:layout_marginBottom="@dimen/_14sdp"
+                android:fontFamily="@font/bukra_regular_family"
+                android:gravity="center"
+                android:textSize="@dimen/_10ssp" />
+
+        </LinearLayout>
+
 
     </LinearLayout>
-
-
-</RelativeLayout>
+</androidx.core.widget.NestedScrollView>

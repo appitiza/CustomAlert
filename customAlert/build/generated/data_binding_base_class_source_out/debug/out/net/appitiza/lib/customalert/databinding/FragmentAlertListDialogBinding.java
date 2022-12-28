@@ -6,10 +6,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.widget.NestedScrollView;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
@@ -21,7 +21,7 @@ import net.appitiza.lib.customalert.R;
 
 public final class FragmentAlertListDialogBinding implements ViewBinding {
   @NonNull
-  private final RelativeLayout rootView;
+  private final NestedScrollView rootView;
 
   @NonNull
   public final MaterialButton btnCancel;
@@ -47,7 +47,7 @@ public final class FragmentAlertListDialogBinding implements ViewBinding {
   @NonNull
   public final TextView tvAlertMessage;
 
-  private FragmentAlertListDialogBinding(@NonNull RelativeLayout rootView,
+  private FragmentAlertListDialogBinding(@NonNull NestedScrollView rootView,
       @NonNull MaterialButton btnCancel, @NonNull MaterialButton btnOkay, @NonNull ImageView ivLogo,
       @NonNull LinearLayout llFooter, @NonNull LinearLayout llHeader,
       @NonNull RecyclerView rvAlertContent, @NonNull TextView tvAlertHeading,
@@ -65,7 +65,7 @@ public final class FragmentAlertListDialogBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public RelativeLayout getRoot() {
+  public NestedScrollView getRoot() {
     return rootView;
   }
 
@@ -138,7 +138,7 @@ public final class FragmentAlertListDialogBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentAlertListDialogBinding((RelativeLayout) rootView, btnCancel, btnOkay,
+      return new FragmentAlertListDialogBinding((NestedScrollView) rootView, btnCancel, btnOkay,
           ivLogo, llFooter, llHeader, rvAlertContent, tvAlertHeading, tvAlertMessage);
     }
     String missingId = rootView.getResources().getResourceName(id);

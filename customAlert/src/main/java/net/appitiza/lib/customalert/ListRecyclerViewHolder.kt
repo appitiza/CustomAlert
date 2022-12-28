@@ -25,18 +25,12 @@ sealed class ListRecyclerViewHolder(binding: ViewBinding) :
             binding.tvTitle.setTextColor(ContextCompat.getColor(context, itemTextColor))
             binding.tvTitle.text = item.displayName
             if (item.isSelected == true) {
-                binding.flRoot.setBackgroundColor(
-                    ContextCompat.getColor(
-                        context,
-                        selectedItemBGColor
-                    )
+                binding.flRoot.setBackgroundResource(
+                    selectedItemBGColor
                 )
             } else {
-                binding.flRoot.setBackgroundColor(
-                    ContextCompat.getColor(
-                        context,
-                        unSelectedItemBGColor
-                    )
+                binding.flRoot.setBackgroundResource(
+                    unSelectedItemBGColor
                 )
             }
             binding.flRoot.setOnClickListener {
