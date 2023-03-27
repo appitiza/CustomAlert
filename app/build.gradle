@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "com.appitiza.net.example"
-        minSdk 26
+        minSdk 25
         targetSdk 33
         versionCode 1
         versionName "1.0"
