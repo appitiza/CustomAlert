@@ -8,4 +8,5 @@ data class ListModel(
     var id: Int? = 0,
     var displayName: String? = "",
     var isSelected: Boolean? = false,
+    var tag: String? = "",
 ) : Parcelable
