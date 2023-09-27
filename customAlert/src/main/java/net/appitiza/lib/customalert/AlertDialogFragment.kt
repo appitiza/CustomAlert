@@ -12,7 +12,7 @@ import net.appitiza.lib.customalert.enum.AlertTypes
 
 class AlertDialogFragment() : CustomAlert() {
 
-    private val positiveAction: (() -> Unit)? = null
+    private var positiveAction: (() -> Unit)? = null
 
     private var _binding: FragmentAlertDialogBinding? = null
     private val mBinding get() = _binding!!
@@ -76,7 +76,21 @@ class AlertDialogFragment() : CustomAlert() {
         fun build(): AlertDialogFragment {
             val dialog = AlertDialogFragment()
             dialog.title = title ?: ""
-
+            dialog.titleTextColor = titleTextColor
+            dialog.message = message ?: ""
+            dialog.messageTextColor = messageTextColor
+            dialog.alertBG = alertBG
+            dialog.type = type ?: AlertTypes.NONE
+            dialog.shouldShowPositive = shouldShowPositive ?: true
+            dialog.positiveButtonTextColor = positiveButtonTextColor
+            dialog.positiveButtonBGColor = positiveButtonBGColor
+            dialog.positiveButtonText = positiveButtonText
+            dialog.shouldShowNegative = shouldShowNegative ?: false
+            dialog.negativeButtonTextColor = negativeButtonTextColor
+            dialog.negativeButtonBGColor = negativeButtonBGColor
+            dialog.negativeButtonText = negativeButtonText
+            dialog.positiveAction = positiveAction
+            dialog.negativeAction = negativeAction
             return dialog
         }
 
