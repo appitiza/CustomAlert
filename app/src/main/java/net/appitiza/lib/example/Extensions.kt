@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.appitiza.net.example.R
 import net.appitiza.lib.customalert.AlertDialogFragment
+import net.appitiza.lib.customalert.AlertEtDialogFragment
 import net.appitiza.lib.customalert.AlertListDialogFragment
 import net.appitiza.lib.customalert.ListModel
 import net.appitiza.lib.customalert.enum.AlertTypes
@@ -24,22 +25,62 @@ fun AppCompatActivity.showAlert(
     positiveAction: (() -> Unit)? = null,
     negativeAction: (() -> Unit)? = null
 ) {
-    val dialog = AlertDialogFragment(
-        title = title,
-        message = message,
-        type = type,
-        shouldShowPositive = shouldShowPositive,
-        positiveButtonText = positiveButtonText,
-        positiveButtonBGColor = positiveButtonBGColor,
-        negativeButtonBGColor = negativeButtonBGColor,
-        positiveButtonTextColor = positiveButtonTextColor,
-        negativeButtonTextColor = negativeButtonTextColor,
-        shouldShowNegative = shouldShowNegative,
-        negativeButtonText = negativeButtonText,
-        positiveAction = positiveAction,
-        negativeAction = negativeAction
-    )
 
+    val dialog = AlertDialogFragment.Builder()
+        .title(title)
+        .message(message)
+        .alertType(type)
+        .positiveButtonText(positiveButtonText)
+        .negativeButtonText(negativeButtonText)
+        .positiveButtonTextColor(positiveButtonTextColor)
+        .negativeButtonTextColor(negativeButtonTextColor)
+        .positiveButtonBGColor(positiveButtonBGColor)
+        .negativeButtonBGColor(negativeButtonBGColor)
+        .shouldShowPositive(shouldShowPositive)
+        .shouldShowNegative(shouldShowNegative)
+        .positiveAction(positiveAction)
+        .negativeAction(negativeAction)
+        .build()
+    dialog.show(supportFragmentManager, "Custom alert")
+}
+fun AppCompatActivity.showInputAlert(
+    title: String = getString(R.string.app_name),
+    message: String = "",
+    type: AlertTypes = AlertTypes.INFO,
+    hint: String = "",
+    etBGColor: Int = net.appitiza.lib.customalert.R.drawable.button_negative_bg,
+    etHintTextColor: Int = R.color.black,
+    etTextColor : Int = R.color.black,
+    positiveButtonText: String = "Okay",
+    negativeButtonText: String = "Cancel",
+    positiveButtonBGColor: Int = net.appitiza.lib.customalert.R.drawable.button_positive_bg,
+    negativeButtonBGColor: Int = net.appitiza.lib.customalert.R.drawable.button_negative_bg,
+    positiveButtonTextColor: Int = R.color.white,
+    negativeButtonTextColor: Int = R.color.black,
+    shouldShowPositive: Boolean = true,
+    shouldShowNegative: Boolean = false,
+    positiveAction: ((String) -> Unit)? = null,
+    negativeAction: (() -> Unit)? = null
+) {
+    val dialog = AlertEtDialogFragment.Builder()
+        .title(title)
+        .message(message)
+        .alertType(type)
+        .etHint(hint)
+        .etBGColor(etBGColor)
+        .etHintTextColor(etHintTextColor)
+        .etTextColor(etTextColor)
+        .positiveButtonText(positiveButtonText)
+        .negativeButtonText(negativeButtonText)
+        .positiveButtonTextColor(positiveButtonTextColor)
+        .negativeButtonTextColor(negativeButtonTextColor)
+        .positiveButtonBGColor(positiveButtonBGColor)
+        .negativeButtonBGColor(negativeButtonBGColor)
+        .shouldShowPositive(shouldShowPositive)
+        .shouldShowNegative(shouldShowNegative)
+        .positiveAction(positiveAction)
+        .negativeAction(negativeAction)
+        .build()
     dialog.show(supportFragmentManager, "Custom alert")
 }
 
@@ -54,24 +95,19 @@ fun AppCompatActivity.showListAlert(
     negativeAction: (() -> Unit)? = null,
     itemClick: ((Int) -> Unit)? = null
 ) {
-    val dialog = AlertListDialogFragment(
-        title = title,
-        message = message,
-        content = content,
-        itemTextColor = android.R.color.black,
-        selectedBGColor = android.R.color.holo_green_light,
-        unselectedColor = android.R.color.white,
-        type = type,
-        positiveButtonBGColor = net.appitiza.lib.customalert.R.drawable.button_positive_bg,
-        negativeButtonBGColor = net.appitiza.lib.customalert.R.drawable.button_negative_bg,
-        shouldShowPositive = shouldShowPositive,
-        positiveButtonText = "Okay",
-        shouldShowNegative = shouldShowNegative,
-        negativeButtonText = "Cancel",
-        positiveAction = positiveAction,
-        negativeAction = negativeAction,
-        itemClick = itemClick
-    )
+
+
+    val dialog = AlertListDialogFragment.Builder()
+        .title(title)
+        .message(message)
+        .alertType(type)
+        .shouldShowPositive(shouldShowPositive)
+        .shouldShowNegative(shouldShowNegative)
+        .positiveAction(positiveAction)
+        .negativeAction(negativeAction)
+        .content(content)
+        .itemClick(itemClick)
+        .build()
 
     dialog.show(supportFragmentManager, "Custom alert")
 }
@@ -88,22 +124,17 @@ fun Fragment.showListAlert(
     negativeAction: (() -> Unit)? = null,
     itemClick: ((Int) -> Unit)? = null
 ) {
-    val dialog = AlertListDialogFragment(
-        title = title,
-        message = message,
-        content = content,
-        itemTextColor = android.R.color.white,
-        selectedBGColor = android.R.color.holo_green_light,
-        unselectedColor = android.R.color.white,
-        type = type,
-        shouldShowPositive = shouldShowPositive,
-        positiveButtonText = "Okay",
-        shouldShowNegative = shouldShowNegative,
-        negativeButtonText = "Cancel",
-        positiveAction = positiveAction,
-        negativeAction = negativeAction,
-        itemClick = itemClick
-    )
+    val dialog = AlertListDialogFragment.Builder()
+        .title(title)
+        .message(message)
+        .alertType(type)
+        .shouldShowPositive(shouldShowPositive)
+        .shouldShowNegative(shouldShowNegative)
+        .positiveAction(positiveAction)
+        .negativeAction(negativeAction)
+        .content(content)
+        .itemClick(itemClick)
+        .build()
 
     dialog.show(childFragmentManager, "Custom alert")
 }

@@ -25,6 +25,18 @@ class MainActivity : AppCompatActivity() {
                 shouldShowNegative = true
             )
         }
+        mBinding.btnInputAlert.setOnClickListener {
+            showInputAlert(
+                title = "My Title",
+                message = "My Message",
+                hint = "Enter your code",
+                shouldShowPositive = true,
+                positiveAction = ({ uniqueCode->
+                    Toast.makeText(this, uniqueCode, Toast.LENGTH_SHORT).show()
+                }),
+                shouldShowNegative = false
+            )
+        }
         mBinding.btnListAlert.setOnClickListener {
             val list = arrayListOf<ListModel>()
             list.add(ListModel(1, "Option 1",false))
